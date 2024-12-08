@@ -1,0 +1,147 @@
+body {
+    padding-top: 116px;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #eaeaea;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    margin-bottom: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0px 20px;
+    z-index: 1000;
+}
+
+.NotesList {
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-grow: 1;
+    overflow-y: auto;
+    height: calc(100vh - 100px);
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button img {
+    width: 20px;
+    height: 20px;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+.notes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    position: relative;
+}
+
+.note {
+    background-color: #dbe6e2;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.note:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.note.blurred {
+    background-color: #6666664d;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.btn-icone {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0;
+}
+
+.note .shared-with {
+    display: flex;
+    gap: 8px;
+}
+
+.shared-with span {
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
